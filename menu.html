@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#E53935;
+    text-align:center;
+    padding:40px 20px;
+}
+
+h1{
+    margin-bottom:20px;
+    color:#f3ebeb;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Filter Buttons */
+.buttons{
+    margin-bottom:30px;
+}
+
+.buttons button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    background:#fcf7f7;
+    color:#0f0f0f;
+    cursor:pointer;
+    border-radius:5px;
+    font-family: 'Pacifico', cursive;
+}
+
+.buttons button:hover{
+    background:#0b0b0b;
+}
+
+/* Menu Cards */
+.menu-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    font-family: 'Pacifico', cursive;
+}
+
+.menu-card{
+    background:#f9f5f5;
+    width:250px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    font-family: 'Pacifico', cursive;
+}
+
+.menu-card:hover{
+    transform:translateY(-8px);
+}
+
+.menu-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.menu-card h3{
+    margin:15px 0 5px;
+    font-family: 'Pacifico', cursive;
+}
+
+.menu-card p{
+    font-size:14px;
+    color:#555;
+    font-family: 'Pacifico', cursive;
+}
+
+.menu-card span{
+    display:block;
+    margin:10px 0 15px;
+    font-weight:bold;
+    color:#111010;
+    font-family: 'Pacifico', cursive;
+}
+footer{
+           
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:180px;
+            font-family: 'Pacifico', cursive;
+        }
+     
+</style>
+</head>
+
+<body>
+
+<h1>Our Menu</h1>
+
+<div class="buttons">
+    <button onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('veg')">Veg</button>
+    <button onclick="filterMenu('nonveg')">Non-Veg</button>
+</div>
+
+<div class="menu-container">
+
+    <!-- Veg Items -->
+    
+
+    <div class="menu-card veg">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
+        <h3>Veg Salad</h3>
+        <p>Fresh healthy salad</p>
+        <span>₹130</span>
+    </div>
+
+    <!-- Non-Veg Items -->
+    <div class="menu-card nonveg">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
+        <h3>Chicken Biryani</h3>
+        <p>Spicy flavorful biryani</p>
+        <span>₹250</span>
+    </div>
+
+    <div class="menu-card nonveg">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+        <h3>Chicken Burger</h3>
+        <p>Juicy grilled burger</p>
+        <span>₹180</span>
+    </div>
+
+</div>
+<footer>
+    © 2026 Karthika’s Kitchen 🍽 | Made with ❤️
+</footer>
+
+<script>
+function filterMenu(category) {
+    let items = document.querySelectorAll(".menu-card");
+
+    items.forEach(item => {
+        if (category === "all") {
+            item.style.display = "block";
+        } 
+        else if (item.classList.contains(category)) {
+            item.style.display = "block";
+        } 
+        else {
+            item.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>

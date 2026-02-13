@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us 🍽</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            background:#E53935;
+        }
+
+        .contact{
+            padding:60px 20px;
+            text-align:center;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .contact h2{
+            color:#aba5a5;
+            margin-bottom:10px;
+            font-size:32px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .contact p.subtitle{
+            color:#d1c3c3;
+            margin-bottom:40px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .contact-container{
+            display:flex;
+            justify-content:center;
+            gap:50px;
+            flex-wrap:wrap;
+            margin-bottom:40px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        form{
+            width:320px;
+            background:white;
+            padding:20px;
+            border-radius:12px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            display:flex;
+            flex-direction:column;
+            font-family: 'Pacifico', cursive;
+        }
+
+        input, textarea{
+            margin-bottom:15px;
+            padding:12px;
+            border:1px solid #ddd;
+            border-radius:8px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        button{
+            padding:12px;
+            background:#d62828;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:15px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        button:hover{
+            background:#a4161a;
+        }
+
+        .contact-info{
+            text-align:left;
+            max-width:300px;
+            background:white;
+            padding:20px;
+            border-radius:12px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            font-family: 'Pacifico', cursive;
+        }
+
+        .contact-info p{
+            margin:10px 0;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .whatsapp{
+            display:inline-block;
+            margin-top:15px;
+            padding:10px 15px;
+            background:#25D366;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .whatsapp:hover{
+            background:#1ebe5d;
+        }
+
+        .social{
+            margin-top:15px;
+        }
+
+        .social span{
+            margin-right:10px;
+            font-size:20px;
+            cursor:pointer;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .hours{
+            margin-top:20px;
+            font-size:14px;
+            color:#444;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .map{
+            margin-top:30px;
+        }
+
+        footer{
+            background:#222;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:40px;
+            font-family: 'Pacifico', cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="contact">
+    <h2>📞 Contact Us 🍕</h2>
+    <p class="subtitle">We would love to hear from you! 💬✨</p>
+
+    <div class="contact-container">
+
+        <!-- Contact Form -->
+        <form onsubmit="sendMessage(event)">
+            <input type="text" placeholder="👤 Your Name" required>
+            <input type="email" placeholder="📧 Your Email" required>
+            <textarea rows="5" placeholder="💌 Your Message" required></textarea>
+            <button type="submit">🚀 Send Message</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p>📍 <strong>Address:</strong> Virudhunagar, Tamil Nadu</p>
+            <p>📞 <strong>Phone:</strong> +91 8838733093</p>
+            <p>📧 <strong>Email:</strong> info@kkitchen.com</p>
+
+            <div class="hours">
+                ⏰ <strong>Opening Hours:</strong><br>
+                Mon - Fri : 10:00 AM - 10:00 PM<br>
+                Sat - Sun : 9:00 AM - 11:00 PM
+            </div>
+
+            <a href="https://wa.me/918838733093" target="_blank" class="whatsapp">
+                💬 Chat on WhatsApp
+            </a>
+
+            <div class="social">
+                🌐 Follow us:
+                <span>📘</span>
+                <span>📸</span>
+                <span>🐦</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Google Map -->
+    <div class="map">
+        <iframe 
+            src="https://www.google.com/maps?q=Virudhunagar,TamilNadu&output=embed"
+            width="100%" 
+            height="300" 
+            style="border:0;"
+            loading="lazy">
+        </iframe>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Karthika’s Kitchen 🍽 | Made with ❤️
+</footer>
+
+<script>
+function sendMessage(event){
+    event.preventDefault();
+    alert("🎉 Thank you! Your message has been sent successfully! 😊");
+}
+</script>
+
+</body>
+</html>
