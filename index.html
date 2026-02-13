@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    background:#E53935;
+    color:#fff;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    
+
+    
+}
+
+
+header h1{
+    color:#f5efef;
+    font-family: 'Pacifico', cursive;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    font-family: 'Pacifico', cursive;
+    
+}
+
+nav a:hover{
+    color:#ff6b00;
+}
+
+/* Hero Section */
+.hero{
+    background-image:url("re1.jpeg"); 
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h2{
+    font-size:45px;
+   background:#E53935;
+    padding:20px 40px;
+    border-radius:8px;
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    
+}
+
+
+
+/* Section */
+.section{
+    padding:60px 50px;
+    text-align:center;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:30px;
+    font-family: 'Pacifico', cursive;
+    
+}
+
+.card{
+    background:#f4f4f4;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+    font-family: 'Pacifico', cursive;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:15px 0;
+    color:#ff6b00;
+    
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#E53935;
+    color:white;
+    font-family: 'Pacifico', cursive;
+    
+}
+
+/* Responsive */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+    }
+
+    nav{
+        margin-top:10px;
+    }
+
+    .menu{
+        grid-template-columns:1fr;
+    }
+
+    .hero h2{
+        font-size:28px;
+        font-family: 'Pacifico', cursive;
+    
+}
+        
+       
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1> Karthika's Kitchen</h1>
+    <nav>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="con.html">Contact us</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Delicious Food Delivered Fresh</h2>
+</section>
+<footer>
+    <p style="font-family: 'Pacifico', cursive"> © 2026 Karthika’s Kitchen 🍽 | Made with ❤️. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
